@@ -21,13 +21,13 @@ body {
 h1 {
     color: #66BFBF;
     font-family: 'Playfair Display', serif;
-    font-size: 562.5%;
-    margin-top: 50px auto 0 auto; 
+    font-size: 350%;
+    margin: 0 auto 0 auto;
 }
 
 h2 {
     color: #66BFBF;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-bottom: 10px;
 }
 
@@ -49,6 +49,7 @@ hr {
 
 p {
     line-height: 2;
+    text-align: justify;
 }
 
 td {
@@ -62,13 +63,15 @@ ul {
 /********************CLASS SELECTORS********************/
 
 .analytical {
-    width: 25%;
+    width: 160px;
     padding-right: 30px;
+    padding-bottom: 30px;
     float: left
 }
 
 .bottom-cloud {
     position: absolute;
+    width: 10%;
 }
 
 .bottom-container {
@@ -114,31 +117,46 @@ ul {
     text-decoration: none;
 }
 
+.connect {
+    text-align: center;
+}
+
 .copyright {
     color: #eaf6f6;
     font-size: 0.75rem;
     position: relative;
-    top: 25px
+    top: 25px;
+    text-align: center;
 }
 
 .cv_button {
     font-size: 1.3em;
-    display: inline-block;
+    display: block;
     position: absolute;
     bottom: 20px;
-    left: 250px;
+    left: 100px;
+    font-weight: bold;
 }
 
 .efficient {
-    width: 25%;
+    width: 160px;
     padding-right: 30px;
+    padding-bottom: 30px;
     float: left
 }
 
 .empathetic {
-    width: 25%;
+    width: 160px;
     padding-left: 30px;
+    padding-bottom: 30px;
     float: right
+}
+
+.employment-row {
+    display: inline-block;
+    margin: 15px auto;
+    text-align: left;
+    width: 80%
 }
 
 .header {
@@ -152,10 +170,11 @@ ul {
 
 .home_button {
     font-size: 1.3em;
-    display: inline-block;
+    display: block;
     position: absolute;
+    /* left: 50px; */
     bottom: 20px;
-    left: 100px;
+    font-weight: bold;
 }
 
 .intro {
@@ -171,11 +190,15 @@ ul {
 }
 
 .maybank {
-    padding-right: 30px;
+    width: 160px;
 }
 
 .middle-container {
     margin: 60px 0;
+}
+
+.mountain {
+    width: 45%;
 }
 
 .name-header {
@@ -183,7 +206,7 @@ ul {
 }
 
 .publicis {
-    padding-right: 30px;
+    width: 160px;
 }
 
 .skill-icon {
@@ -213,21 +236,23 @@ ul {
 }
 
 .tech-savvy {
-    width: 25%;
+    width: 160px;
     padding-left: 30px;
+    padding-bottom: 30px;
     float: right
 }
 
 .top-cloud {
-    position: relative;
-    top: 216px;
-    left: 280px;
+    position: absolute;
+    right: 27.5%;
+    width: 10%;
 }
 
 .top-container {
     background-color:#eaf6f6;
     position: relative;
-    padding: 100px auto
+    padding-top: 80px;
+    
 }
 
 .ucl {
@@ -237,11 +262,136 @@ ul {
 
 
 
+/* Responsive Tables (Employment + Awards + Education)
+======================================================= */
+.Rtable {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+    text-align: left;
+    background-color: white;
+    
+}
 
+.Rtable-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 80%;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: white;
+}
 
+.Rtable-cell--head {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 20%;
+    padding-top: 2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: white;
+    text-align: center;
+}
 
+/* Responsive 
+================================= */
+@media all and (max-width: 1500px) {
+    .Rtable--collapse {
+    display: block;
+    }
 
+    .Rtable--collapse > .Rtable {
+    width: 100% !important;
+    }
 
+    .Rtable--collapse > .Rtable-cell {
+    width: 100% !important;
+    }
 
+    .Rtable--collapse > .Rtable-cell--head {
+    width: 100% !important;
+    }
+}
 
+.no-flexbox .Rtable {
+    display: block;
+}
+
+.no-flexbox .Rtable > .Rtable-cell {
+    width: 100%;
+}
+
+/* Responsive Tables (Skills)
+======================================================= */
+.s-table {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+    width: 59%;
+    text-align: left;
+    background-color: white;
+    
+}
+
+.s-table-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 25%;
+    /* width: 22%; */
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: white;
+}
+
+.s-table-cell--head {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 8%;
+    /* width: 10%; */
+    padding-top: 2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: white;
+    text-align: center;
+}
+
+/* Responsive 
+================================= */
+@media all and (max-width: 1500px) {
+    .s-table--collapse {
+    display: block;
+    }
+
+    .s-table--collapse > .s-table {
+    width: 100% !important;
+    text-align: center;
+    }
+
+    .s-table--collapse > .s-table-cell {
+    width: 100% !important;
+    text-align: center;
+    }
+
+    .s-table--collapse > .s-table-cell--head {
+    width: 100% !important;
+    text-align: center;
+    }
+}
+
+.no-flexbox .Rtable {
+    display: block;
+}
+
+.no-flexbox .Rtable > .Rtable-cell {
+    width: 100%;
+}
 
